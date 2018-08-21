@@ -2,11 +2,11 @@
 IDA plugins for static software complexity metrics collection.
 
 This IDA script collects static software complexity metrics 
-for binary executable of x86 architecture.
+for binary executables of x86 architecture.
 
 Minimal requirements:
 
-IDA 5.5.0
+IDA 5.5.0 (32 bit)
 
 Python 2.5
 
@@ -60,12 +60,26 @@ Additional functionality:
      
      - basic block boundaries generation (function)
 
+The tool is based on [this paper.](https://www.researchgate.net/publication/312577578_Improving_Fuzzing_Using_Software_Complexity_Metrics)
+
+BibTeX:
+```
+@inproceedings{shudrak2015improving,
+    title={Improving fuzzing using software complexity metrics}, 
+    author={Shudrak, Maksim O and Zolotarev, Vyacheslav V},
+    booktitle={International Conference on Information Security and Cryptology},  
+    pages={246--261},
+    year={2015},
+    organization={Springer}
+}
+```
+
 # IDAMetrics-dynamic.py
 
 IDA plugins for trace complexity assessment.
 
-This IDA scripts allows to collect complexity only for 
-for trace of executed application.
+This IDA script allows to calculate complexity of executed trace. The pincc.cpp described
+below may be used to extract such trace from an application.
 
 # pincc.cpp
 
